@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="StockPortfolioBFF.Api/StockPortfolioBFF.Api.csproj" />
+  <Project Path="StockPortfolioBFF.Application/StockPortfolioBFF.Application.csproj" />
+</Solution>

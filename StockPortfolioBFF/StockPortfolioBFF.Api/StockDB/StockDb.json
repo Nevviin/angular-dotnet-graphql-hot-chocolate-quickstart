@@ -1,0 +1,65 @@
+
+  [
+    {
+      "Ticker": "NVDA",
+      "CompanyName": "NVIDIA Corporation",
+      "CurrentPrice": 225.07,
+      "DailyChangePercent": 0.00
+    },
+    {
+      "Ticker": "AAPL",
+      "CompanyName": "Apple Inc.",
+      "CurrentPrice": 341.07,
+      "DailyChangePercent": 0.00
+    },
+    {
+      "Ticker": "GOOGL",
+      "CompanyName": "Alphabet Inc.",
+      "CurrentPrice": 343.92,
+      "DailyChangePercent": 0.00
+    },
+    {
+      "Ticker": "MSFT",
+      "CompanyName": "Microsoft Corporation",
+      "CurrentPrice": 516.17,
+      "DailyChangePercent": 0.00
+    },
+    {
+      "Ticker": "AMZN",
+      "CompanyName": "Amazon.com, Inc.",
+      "CurrentPrice": 249.67,
+      "DailyChangePercent": 0.00
+    },
+    {
+      "Ticker": "META",
+      "CompanyName": "Meta Platforms, Inc.",
+      "CurrentPrice": 751.66,
+      "DailyChangePercent": 0.00
+    },
+    {
+      "Ticker": "TSLA",
+      "CompanyName": "Tesla, Inc.",
+      "CurrentPrice": 372.11,
+      "DailyChangePercent": 0.00
+    },
+    {
+      "Ticker": "LLY",
+      "CompanyName": "Eli Lilly and Company",
+      "CurrentPrice": 1054.89,
+      "DailyChangePercent": 0.00
+    },
+    {
+      "Ticker": "JPM",
+      "CompanyName": "JPMorgan Chase & Co.",
+      "CurrentPrice": 100.00,
+      "DailyChangePercent": 0.00
+    },
+    {
+      "Ticker": "WMT",
+      "CompanyName": "Walmart Inc.",
+      "CurrentPrice": 150.00,
+      "DailyChangePercent": 0.00
+    }
+  ]
+
+

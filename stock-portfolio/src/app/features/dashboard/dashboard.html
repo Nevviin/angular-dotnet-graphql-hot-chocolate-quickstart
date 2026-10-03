@@ -1,0 +1,23 @@
+<section class="dashboard">
+  <h2>{{ title() }}</h2>
+
+  <button type="button" (click)="loadStock()" [disabled]="loading()">
+    {{ loading() ? 'Loading...' : 'Load stock' }}
+  </button>
+
+  @if (error()) {
+    <p class="error">{{ error() }}</p>
+  }
+
+  @if (stock(); as quote) {
+    <div class="stock-card">
+      <p class="label">Selected symbol</p>
+      <h3>{{ quote.symbol }}</h3>
+      <p>{{ quote.name }}</p>
+      <p>Price: ${{ quote.price }}</p>
+      @if (quote.change !== undefined) {
+        <p>Change: {{ quote.change }}</p>
+      }
+    </div>
+  }
+</section>

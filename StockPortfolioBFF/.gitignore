@@ -1,0 +1,22 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+[Aa]rtifacts/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# .NET tooling and test output
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+project.lock.json
+project.fragment.lock.json
+
+# Logs
+*.log
