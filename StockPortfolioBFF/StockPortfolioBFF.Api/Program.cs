@@ -8,7 +8,7 @@ builder.Services.AddScoped<GetStockByTicker>();
 
 builder.Services.AddScoped<IStockRepository>(_ =>
 new JsonStockRepository(
-    System.IO.Path.Combine( AppContext.BaseDirectory, "StockDB", "StockDB.json")));
+    System.IO.Path.Combine( AppContext.BaseDirectory, "StockDB", "StockDb.json")));
 
   
 
