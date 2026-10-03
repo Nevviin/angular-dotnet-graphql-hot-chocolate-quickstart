@@ -16,11 +16,19 @@ export class Dashboard {
   constructor(private readonly stockService : StockService){}
 
 
-  loadStock(): void {
+  loadStock(ticker : string): void {
+
+    const symbol = ticker.trim().toUpperCase();
+
+    if (!symbol){
+      this.error.set('Enter a stock ticker');
+      return;
+    }
+
    this.loading.set(true);
    this.error.set(null);
 
-   this.stockService.getStock('AAPL').subscribe({
+   this.stockService.getStock(symbol).subscribe({
     next : (result) => this.stock.set(result),
   error:()=>{
     this.error.set('Failed to load stock data');

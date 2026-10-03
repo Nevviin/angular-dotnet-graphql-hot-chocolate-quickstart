@@ -1,7 +1,16 @@
 using StockPortfolioBFF.Api.Middleware;
+using StockPortfolioBFF.Application.Stocks;
+using StockPortfolioBFF.Infrastructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddScoped<GetStockByTicker>();
+
+builder.Services.AddScoped<IStockRepository>(_ =>
+new JsonStockRepository(
+    System.IO.Path.Combine( AppContext.BaseDirectory, "StockDB", "StockDB.json")));
+
+  
 
 builder.Services.AddCors(options =>
 {

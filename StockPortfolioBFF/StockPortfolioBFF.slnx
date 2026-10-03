@@ -1,4 +1,6 @@
 <Solution>
   <Project Path="StockPortfolioBFF.Api/StockPortfolioBFF.Api.csproj" />
   <Project Path="StockPortfolioBFF.Application/StockPortfolioBFF.Application.csproj" />
+  <Project Path="StockPortfolioBFF.Domain/StockPortfolioBFF.Domain.csproj" Id="f4b4f780-9aab-4f18-b2c0-eae0835e9d07" />
+  <Project Path="StockPortfolioBFF.Infrastructure/StockPortfolioBFF.Infrastructure.csproj" Id="ebfdc9d1-f79d-48b7-ac29-eba436e5e879" />
 </Solution>

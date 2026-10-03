@@ -12,4 +12,9 @@
     <PackageReference Include="HotChocolate.Types.Analyzers" Version="16.6.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\StockPortfolioBFF.Application\StockPortfolioBFF.Application.csproj" />
+    <ProjectReference Include="..\StockPortfolioBFF.Infrastructure\StockPortfolioBFF.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
