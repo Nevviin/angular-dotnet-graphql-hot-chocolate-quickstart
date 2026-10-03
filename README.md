@@ -66,6 +66,12 @@ GraphQL resolver → Application operation → IStockRepository
 
 The dependency direction points inward: Domain has no project dependencies; Application depends on Domain; Infrastructure implements Application's repository contract; and Api connects the layers. Application and Domain do not depend on GraphQL or the JSON implementation.
 
+### GraphQL error logging
+
+Exceptions thrown while a GraphQL resolver runs are handled by Hot Chocolate and returned in the GraphQL response's `errors` field. Because Hot Chocolate handles them inside GraphQL execution, they generally do not escape to the ASP.NET Core global exception middleware.
+
+The API's `GraphQLErrorFilter` logs resolver exceptions through `ILogger` and replaces their client-facing message with a generic error. Exceptions that escape GraphQL and the rest of the HTTP request pipeline remain the responsibility of `GlobalExceptionMiddleware`. Both logging paths can send logs through the application's configured logging providers.
+
 ## Example GraphQL query
 
 You can run this at `http://localhost:5289/graphql`:

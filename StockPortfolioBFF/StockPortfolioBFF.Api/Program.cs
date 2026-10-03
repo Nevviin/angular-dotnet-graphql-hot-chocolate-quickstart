@@ -1,10 +1,14 @@
+using StockPortfolioBFF.Api.Filters;
 using StockPortfolioBFF.Api.Middleware;
 using StockPortfolioBFF.Application.Stocks;
 using StockPortfolioBFF.Infrastructure.Repositories;
+using HotChocolate;
+using HotChocolate.Execution;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddScoped<GetStockByTicker>();
+
 
 builder.Services.AddScoped<IStockRepository>(_ =>
 new JsonStockRepository(
@@ -20,9 +24,11 @@ builder.Services.AddCors(options =>
     .AllowAnyMethod()
     );
 });
+builder.Services.AddLogging();
+builder.AddGraphQL().AddApiTypes()
+    .AddApplicationService<ILogger<GraphQLErrorFilter>>()
+    .AddErrorFilter<GraphQLErrorFilter>();
 
-builder.AddGraphQL().AddApiTypes();
-    
 
 var app = builder.Build();
 
@@ -33,3 +39,5 @@ app.UseMiddleware<GlobalExceptionMiddleware>();
 app.MapGraphQL();
 
 app.RunWithGraphQLCommands(args);
+
+
